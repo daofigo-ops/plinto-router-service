@@ -1,0 +1,41 @@
+.venv/
+__pycache__/
+*.pyc
+reports/
+data/device_inventory.json
+config/credentials.yaml
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Frontend generated files
+node_modules/
+dist/
+build/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+config/credentials.yaml
+config/credentials.*.yaml
+!config/credentials.example.yaml
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Audit output and sensitive device data
+reports/
+screenshots/
+data/device_inventory.json
+*.jsonl
+
+# Temporary and local files
+.DS_Store
+*.log
+*.tmp

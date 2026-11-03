@@ -1,0 +1,57 @@
+# Plinto Network Audit configuration
+# Safe defaults: private LAN only, no login attempts, no password guessing, no device changes.
+
+# Phase 4A adds restricted authorized Pentest Mode, still disabled by default.
+# Normal flow remains: scan -> audit -> report.
+
+default_ports:
+  - 80
+  - 443
+  - 8080
+  - 8443
+  - 8000
+  - 8888
+
+fingerprint_file: data/fingerprints.yaml
+
+scan:
+  timeout: 3.0
+  concurrency: 128
+  max_hosts: 512
+  local_prefix: 24
+  private_only: true
+  deep_fingerprint: true
+  max_extra_paths: 14
+
+reports:
+  output_dir: reports
+  save_history: true
+  write_latest_copies: true
+
+inventory:
+  enabled: true
+  path: data/device_inventory.json
+
+dns:
+  # Audit-only visible DNS extraction. Does not log in and does not change DNS.
+  audit_visible_dns: true
+
+pentest:
+  # CLI still requires --pentest and --i-own-this-network.
+  enabled: false
+
+  # Keep disabled unless you intentionally want the tiny factory-default audit.
+  allow_default_credential_check: false
+
+  # Safety default: even when --pentest is supplied, no credential attempts happen
+  # unless --apply-pentest is also supplied.
+  dry_run: true
+
+  # One attempt at a time, with a delay. This is validation, not brute force.
+  rate_limit_seconds: 1.0
+
+  # Built-in factory-default list is intentionally tiny and capped.
+  max_default_credentials: 3
+
+  # Passwords are never written here; credential labels are redacted.
+  audit_log: reports/pentest_audit.jsonl

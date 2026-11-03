@@ -1,0 +1,171 @@
+rules:
+  - vendor: TP-Link
+    device_type: Router
+    patterns:
+      - tp-link
+      - tplink
+      - archer
+      - td-w
+      - tl-wr
+      - userRpm
+
+  - vendor: D-Link
+    device_type: Router
+    patterns:
+      - d-link
+      - dlink
+      - dir-
+      - dsl-
+      - HNAP1
+
+  - vendor: NETGEAR
+    device_type: Router
+    patterns:
+      - netgear
+      - nighthawk
+      - routerlogin
+
+  - vendor: ASUS
+    device_type: Router
+    patterns:
+      - asus
+      - asuswrt
+      - Main_Login.asp
+
+  - vendor: MikroTik
+    device_type: Router
+    patterns:
+      - mikrotik
+      - routeros
+      - winbox
+
+  - vendor: OpenWrt
+    device_type: Router
+    patterns:
+      - openwrt
+      - luci
+      - cgi-bin/luci
+
+  - vendor: Ubiquiti
+    device_type: Network Device
+    patterns:
+      - ubiquiti
+      - unifi
+      - airmax
+
+  - vendor: Huawei
+    device_type: Router
+    patterns:
+      - huawei
+      - hg8245
+      - echolife
+
+  - vendor: ZTE
+    device_type: Router
+    patterns:
+      - zte
+      - zxhn
+      - f660
+      - f670
+
+  - vendor: FiberHome
+    device_type: Router
+    patterns:
+      - fiberhome
+      - an5506
+      - hg6245
+
+  - vendor: Hikvision
+    device_type: CCTV/NVR
+    patterns:
+      - hikvision
+      - web components
+      - ip camera
+      - nvr
+
+  - vendor: Dahua
+    device_type: CCTV/NVR
+    patterns:
+      - dahua
+      - web service
+      - dvr
+      - nvr
+
+  - vendor: Synology
+    device_type: NAS
+    patterns:
+      - synology
+      - diskstation
+      - dsm
+
+  - vendor: QNAP
+    device_type: NAS
+    patterns:
+      - qnap
+      - turbo nas
+      - qts
+
+  - vendor: HP
+    device_type: Printer
+    patterns:
+      - hp laserjet
+      - hewlett-packard
+      - embedded web server
+
+  - vendor: Generic Printer
+    device_type: Printer
+    patterns:
+      - printer
+      - cups
+      - epson
+      - canon
+      - brother
+
+  - vendor: NGINX
+    device_type: Web Server
+    patterns:
+      - nginx
+      - welcome to nginx
+
+  - vendor: Uvicorn/FastAPI
+    device_type: Python API Server
+    patterns:
+      - uvicorn
+      - fastapi
+      - openapi.json
+      - swagger ui
+      - redoc
+
+  - vendor: Apache
+    device_type: Web Server
+    patterns:
+      - apache
+      - apache2 ubuntu default page
+
+  - vendor: Node/Express
+    device_type: Node Web Service
+    patterns:
+      - express
+      - x-powered-by: express
+
+  - vendor: Grafana
+    device_type: Dashboard Service
+    patterns:
+      - grafana
+
+  - vendor: Portainer
+    device_type: Container Admin Panel
+    patterns:
+      - portainer
+
+  - vendor: Home Assistant
+    device_type: IoT Dashboard
+    patterns:
+      - home assistant
+      - hassio
+
+  - vendor: Prometheus
+    device_type: Monitoring Service
+    patterns:
+      - prometheus
+      - promhttp
